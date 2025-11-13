@@ -88,10 +88,67 @@ body {
     padding: 4rem 0;
 }
 
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+}
+
 .hero-text h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-blue);
+    box-shadow: 0 10px 40px rgba(0,102,255,0.2);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-blue);
+}
+
+.btn-icon {
+    padding: 0.8rem;
+    background: white;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-icon:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
 }
 
 .highlight {
@@ -225,16 +282,22 @@ section {
 }
 
 .timeline {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .timeline-item {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-light);
     margin-bottom: 2rem;
+    transition: all 0.3s;
+}
+
+.timeline-item:hover {
+    box-shadow: 0 5px 20px rgba(0,102,255,0.08);
+    border-color: var(--primary-blue);
 }
 
 .timeline-header {
@@ -363,11 +426,15 @@ section {
     border: 1px solid var(--border-light);
     text-align: center;
     transition: all 0.3s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .cert-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0,102,255,0.1);
+    border-color: var(--primary-blue);
 }
 
 .cert-icon {
@@ -446,9 +513,40 @@ footer {
     color: var(--text-gray);
 }
 
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.footer-links a {
+    color: var(--text-gray);
+    transition: all 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
     }
     
     .hero-text h1 {
@@ -465,6 +563,10 @@ footer {
     
     .timeline-meta {
         text-align: left;
+    }
+    
+    .timeline-item {
+        padding: 1.5rem;
     }
 }
 
