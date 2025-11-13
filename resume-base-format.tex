@@ -1,0 +1,227 @@
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE RAJU MYAKA}} & Email: rajureddymyaka@gmail.com\\
+  Senior Cloud Infrastructure Architect & Mobile: (540)-505-6404 \\
+  \href{https://www.linkedin.com/in/rajureddym/}{linkedin.com/in/rajumyaka} & Winchester, Virginia \\
+\end{tabular*}
+
+%-----------PROFESSIONAL SUMMARY-----------------
+\section{Professional Summary}
+\small{Senior Cloud Infrastructure Architect with 8+ years of experience delivering \$20M+ enterprise cloud transformations across healthcare. Expert in AWS cloud architecture, infrastructure automation, DevSecOps, and cloud migration strategies. Proven track record of achieving 40\% cost reductions and 90\% efficiency improvements through innovative solutions. AWS certified professional with 7 certifications including Security Specialty and Solutions Architect Professional.}
+
+\vspace{6pt}
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Amazon Web Services}{Jun 2022 - Present}
+    {Senior Cloud Infrastructure Architect}{Remote}
+    \resumeItemListStart
+        \resumeItem{Cloud Solution Architecture}
+          {Led technical scoping for 26+ healthcare organizations, architecting cloud solutions valued at \$20M+ for FY25}
+        \resumeItem{Stakeholder Engagement}
+          {Collaborated with executive stakeholders on requirements gathering and business objectives, architecting scalable, secure solutions aligned with Customer Business Outcomes (CBOs)}
+        \resumeItem{Enterprise Migrations}
+          {Led technical delivery for 15+ enterprise cloud transformation and migration engagements totaling \$10M+}
+        \resumeItem{AWS Landing Zone}
+          {Architected and delivered AWS Landing Zones for 10+ enterprise customers using Control Tower and Organizations}
+        \resumeItem{Security Architecture}
+          {Designed secure, compliant AWS environments using Service Control Policies, Security Hub, GuardDuty, and AWS Config aligned with NIST, HIPAA, and CIS benchmarks}
+        \resumeItem{Operational Compliance}
+          {Established organization-wide compliance automation for backup, disaster recovery, and patch management using tagging, AWS Backup, and Systems Manager, ensuring adherence to regulatory standards}
+        \resumeItem{Identity Management}
+          {Implemented Identity Access Management using AWS Identity Center (SSO) with external IdP integration (Okta, Azure Entra ID) using SAML}
+        \resumeItem{Network Architecture}
+          {Architected hybrid connectivity for multi-account environments using Transit Gateway, Direct Connect, and Site-to-Site VPN}
+        \resumeItem{Zero Trust Security}
+          {Designed Zero Trust network security architectures using AWS Network Firewall, implementing traffic inspection and segmentation}
+        \resumeItem{Cost Optimization}
+          {Delivered \$3.5M+ annual savings (40\% reduction) through automated resource scheduling, rightsizing, and Reserved Instance strategies}
+        \resumeItem{Resilience Engineering}
+          {Architected chaos engineering framework using AWS Resilience Hub and Fault Injection Service, improving system reliability by 80\%}
+        \resumeItem{Executive Advisory}
+          {Advised C-suite and engineering leaders on AWS best practices, architecture trade-offs, and risk mitigation strategies}
+        \resumeItem{Technical Enablement}
+          {Delivered 20+ AWS technical enablement workshops to 1000+ attendees from customer and partner teams}
+        \resumeItem{Training \& Mentorship}
+          {Developed and launched internal AWSome Builder program to accelerate new hire readiness, mentoring engineers for Area of Depth and Technical Field Community programs}
+      \resumeItemListEnd
+\vspace{6pt}
+    \resumeSubheading{Amazon Web Services}{Jan 2021 - May 2022}
+    {DevOps Consultant II}{Remote}
+    \resumeItemListStart
+        \resumeItem{Platform Engineering}
+          {Built bioinformatics research platform automation reducing project setup time by 90\% (from 5 hours to 30 minutes)}
+        \resumeItem{Serverless Architecture}
+          {Developed serverless medical image metadata extraction for PACS/DICOM data using S3, Lambda, and DynamoDB, fully automating manual workflows and saving 3+ hours daily for IT teams}
+        \resumeItem{Document Processing}
+          {Designed scalable serverless document ingestion using S3, Lambda, and Amazon Textract with Lex-based search, automating compound information extraction for research teams}
+        \resumeItem{Cost Management}
+          {Implemented automated budget monitoring and alerting using AWS Budgets, preventing cost overruns and saving \$100K+ annually}
+        \resumeItem{DevSecOps}
+          {Implemented complex Azure DevSecOps pipelines for multi-account continuous deployments with automated security scanning}
+        \resumeItem{Infrastructure as Code}
+          {Designed CI/CD pipelines using CodePipeline, CodeBuild, CodeDeploy and IaC using CloudFormation and Terraform}
+      \resumeItemListEnd
+\vspace{6pt}
+    \resumeSubheading{Amazon Web Services}{Jan 2019 - Dec 2020}
+    {DevOps Cloud Support Engineer II}{Remote}
+    \resumeItemListStart
+        \resumeItem{Technical Support}
+          {Provided Tier 3 technical support to enterprise customers across AWS Services including CodePipeline, CloudFormation, and Elastic Beanstalk}
+        \resumeItem{Container Expertise}
+          {Served as Subject Matter Expert for Amazon Elastic Container Service (ECS) and Elastic Kubernetes Service (EKS)}
+        \resumeItem{Operational Excellence}
+          {Reduced ECS service team escalations by 40\% through advanced troubleshooting and internal tooling improvements}
+        \resumeItem{Customer Success}
+          {Resolved 600+ critical production tickets performing root cause analysis for hundreds of enterprise customers}
+        \resumeItem{Knowledge Sharing}
+          {Authored 8 Knowledge Center articles and delivered 15+ service enablement sessions for 100+ engineers}
+        \resumeItem{Product Influence}
+          {Collaborated with AWS service teams and influenced product roadmap based on customer feedback}
+      \resumeItemListEnd
+\vspace{6pt}
+    \resumeSubheading{Virginia Tech}{Jan 2018 - Dec 2018}
+    {Web Application Administrator II}{Blacksburg, VA}
+    \resumeItemListStart
+        \resumeItem{Container Modernization}
+          {Containerized Apache web server and deployed via Docker Swarm to modernize legacy infrastructure}
+        \resumeItem{Configuration Management}
+          {Automated configuration management and deployment using Jenkins pipelines and Ansible}
+        \resumeItem{Database Administration}
+          {Managed Adobe Experience Manager system and MongoDB cluster administration including upgrades, backups, and recovery}
+        \resumeItem{Monitoring}
+          {Implemented web services monitoring using Prometheus and Grafana with comprehensive root cause analysis}
+      \resumeItemListEnd
+\vspace{5pt}
+    \resumeSubheading{Wipro Ltd}{Feb 2015 - Jul 2016}
+    {System Engineer}{Hyderabad, India}
+    \resumeItemListStart
+        \resumeItem{Linux Administration}
+          {Supported Linux server administration, DNS/DHCP configuration, and system automation using Chef and Jenkins}
+        \resumeItem{CI/CD Implementation}
+          {Built CI/CD pipelines for Java web services using Maven and Jenkins, deployed Java applications in clustered environments}
+        \resumeItem{Storage Management}
+          {Managed scalable storage solutions using Logical Volume Management (LVM) with various disk management techniques}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{2pt}
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+	\item \small{\textbf{Cloud Platforms}: AWS (Expert), Azure, Multi-cloud Architecture, Hybrid Cloud Solutions}
+	\item \small{\textbf{Infrastructure as Code}: AWS CDK, CloudFormation, Terraform, Ansible, Packer, GitOps, Infrastructure Automation}
+	\item \small{\textbf{DevOps \& CI/CD}: GitHub Actions, GitLab CI, Jenkins, Azure DevOps, Argo CD, CodePipeline, CodeBuild, CodeDeploy}
+	\item \small{\textbf{Containers \& Orchestration}: Docker, Kubernetes, Amazon ECS, Amazon EKS, Fargate, Container Security}
+	\item \small{\textbf{Programming}: Python, TypeScript, JavaScript, Bash, SQL, Infrastructure Automation Scripts}
+	\item \small{\textbf{Databases}: PostgreSQL, MySQL, MongoDB, Amazon Aurora, DynamoDB, RDS, Database Migration Service}
+	\item \small{\textbf{Monitoring \& Observability}: CloudWatch, X-Ray, Prometheus, Grafana, ELK Stack, Splunk, APM Tools}
+	\item \small{\textbf{Security \& Compliance}: HIPAA, IAM, KMS, Secrets Manager, Security Hub, GuardDuty, Config, CloudTrail, Zero Trust}
+	\item \small{\textbf{Networking}: VPC, Transit Gateway, Direct Connect, VPN, Route 53, CloudFront, ALB/NLB, Network Firewall, WAF}
+	\item \small{\textbf{Storage \& Compute}: EC2, AWS Batch, EBS, S3, EFS, FSx, FSx for NetApp ONTAP, Storage Gateway}
+    \item \small{\textbf{Migrations}: Cloud Migration Factory, Application Migration Service (MGN), DataSync, Database Migration Service}
+    \item \small{\textbf{Modernization}: Event Driven Architecture, Serverless, Microservices, API Gateway, Lambda, Step Functions, Event Bridge}
+    \item \small{\textbf{Methodologies}: Agile, Scrum, DevOps, Automation, Chaos Engineering, Well-Architected Framework}
+\end{itemize}
+
+\vspace{2pt}
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={\textbullet}]
+\item \small{\textbf{Security}: AWS Certified Security - Specialty}
+\item \small{\textbf{Professional}: AWS Certified Solutions Architect - Professional, AWS Certified DevOps Engineer - Professional}
+\item \small{\textbf{Associate}: AWS Certified Solutions Architect - Associate, AWS Certified Developer - Associate, AWS Certified SysOps Administrator - Associate}
+\item \small{\textbf{Specialty}: AWS Certified AI Practitioner}
+\item \small{\textbf{Endorsements}: SME - Elastic Container Service (ECS), Area of Depth Expert - Network \& Edge Services}
+\end{itemize}
+
+\vspace{2pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Missouri Kansas City}{Aug 2016 - Dec 2017}
+      {Master of Science in Software Engineering}{Kansas City, MO}
+      \begin{itemize}[leftmargin=0.15in, label={\small$\circ$}]
+        \item \small{\textbf{Focus Areas}: Cloud Computing, Software Architecture, Distributed Systems}
+        \item \small{\textbf{GPA}: 3.5/4.0}
+      \end{itemize}
+    \resumeSubheading
+      {Sreenidhi Institute of Science \& Technology}{Aug 2011 - May 2015}
+      {Bachelor of Technology in Electronics \& Communication Engineering}{Hyderabad, India}
+      \begin{itemize}[leftmargin=0.15in, label={\small$\circ$}]
+        \item \small{\textbf{Focus Areas}: Computer Networks, System Design, Programming}
+        \item \small{\textbf{GPA}: 3.8/4.0}
+      \end{itemize}
+    \resumeSubHeadingListEnd
+
+\end{document}
