@@ -11,591 +11,588 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --text-primary: #e4e4e7;
+            --text-secondary: #a1a1aa;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border: #27272a;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            padding: 20px 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .download-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
-            transition: all 0.3s;
-            z-index: 1000;
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-        
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 30px rgba(102, 126, 234, 0.6);
-            border-color: rgba(255,255,255,0.6);
+            padding: 60px 20px;
         }
         
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 50px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-out;
         }
         
-        header:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        header > * {
-            position: relative;
-            z-index: 1;
+        .subtitle {
+            font-size: 1.5em;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-weight: 400;
         }
         
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        header .subtitle {
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-        
-        .contact-info {
+        .contact-links {
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            gap: 24px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 32px;
         }
         
-        .contact-info a {
+        .contact-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.95em;
+        }
+        
+        .contact-links a:hover {
+            color: var(--accent);
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent);
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin-top: 32px;
         }
         
-        .contact-info a:hover {
-            opacity: 0.8;
-        }
-        
-        .content {
-            padding: 40px;
+        .download-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
         }
         
         section {
-            margin-bottom: 40px;
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
         }
         
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+        
         h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.5em;
+            margin-bottom: 32px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
         }
         
         .summary {
+            color: var(--text-secondary);
             font-size: 1.05em;
             line-height: 1.8;
-            color: #555;
         }
         
         .job {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(102, 126, 234, 0.02);
-            border-radius: 10px;
-            border-left: 3px solid #667eea;
-            transition: all 0.3s;
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--border);
         }
         
-        .job:hover {
-            background: rgba(102, 126, 234, 0.05);
-            border-left-width: 5px;
+        .job:last-child {
+            border-bottom: none;
         }
         
         .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
         
-        .job-title {
-            flex: 1;
+        .job-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 12px;
         }
         
         .company {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .position {
-            font-style: italic;
-            color: #666;
-            margin-top: 5px;
-        }
-        
-        .job-meta {
-            text-align: right;
-            color: #888;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--text-primary);
         }
         
         .date {
-            font-weight: bold;
-            color: #667eea;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        .position-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .position {
+            color: var(--accent);
+            font-size: 1em;
         }
         
         .location {
+            color: var(--text-secondary);
             font-size: 0.9em;
         }
         
         .achievements {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         
         .achievements li {
-            padding-left: 25px;
-            margin-bottom: 10px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            padding-left: 24px;
             position: relative;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         
         .achievements li:before {
-            content: "▹";
+            content: "→";
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: var(--accent);
             font-weight: bold;
-            font-size: 1.2em;
         }
         
         .achievement-title {
-            font-weight: bold;
-            color: #333;
+            color: var(--text-primary);
+            font-weight: 500;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
         }
         
         .skill-item {
-            padding: 15px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-left: 4px solid #667eea;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
             border-radius: 8px;
-            transition: all 0.3s;
+            transition: all 0.2s;
         }
         
         .skill-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-            border-left-width: 6px;
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
         
         .skill-category {
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-        
-        .skill-list {
-            color: #555;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 8px;
             font-size: 0.95em;
         }
         
-        .cert-list, .education-list {
+        .skill-list {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        
+        .cert-list {
             list-style: none;
         }
         
-        .cert-list li, .education-list li {
-            padding: 12px 0;
-            padding-left: 25px;
-            position: relative;
-            border-bottom: 1px solid #eee;
+        .cert-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
         }
         
-        .cert-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .cert-list strong {
+            color: var(--text-primary);
         }
         
         .education-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s;
+            margin-bottom: 32px;
+            padding: 24px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.2s;
         }
         
         .education-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.15);
+            border-color: var(--accent);
         }
         
         .education-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
+            gap: 12px;
         }
         
         .school {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #333;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--text-primary);
         }
         
         .degree {
-            color: #666;
-            font-style: italic;
-            margin-top: 5px;
+            color: var(--accent);
+            margin-top: 4px;
+            font-size: 0.95em;
         }
         
         .education-details {
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: #555;
+            margin-top: 12px;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
         
         footer {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
             text-align: center;
-            padding: 25px;
-            margin-top: 0;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
         }
         
-        @media print {
-            .download-btn {
-                display: none;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            body {
-                background: white;
-            }
-            .container {
-                box-shadow: none;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         
         @media (max-width: 768px) {
-            .download-btn {
-                position: static;
-                display: block;
-                margin: 20px;
-                text-align: center;
+            h1 {
+                font-size: 2em;
             }
             
-            header h1 {
-                font-size: 1.8em;
+            .subtitle {
+                font-size: 1.2em;
             }
             
-            .contact-info {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            section {
+                margin-bottom: 60px;
+            }
+            
+            .job-title-row,
+            .position-row,
+            .education-header {
                 flex-direction: column;
-                gap: 10px;
+                gap: 4px;
             }
-            
-            .job-header {
-                flex-direction: column;
-            }
-            
-            .job-meta {
-                text-align: left;
-                margin-top: 10px;
-            }
-            
-            .content {
-                padding: 20px;
-            }
+        }
+        
+        ::selection {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
         }
     </style>
 </head>
 <body>
-    <a href="RajuMyaka_Resume.pdf" class="download-btn" download>📄 Download PDF</a>
-    
     <div class="container">
         <header>
             <h1>Raju Myaka</h1>
             <div class="subtitle">Senior Cloud Infrastructure Architect</div>
-            <div class="contact-info">
-                <span>📧 rajureddymyaka@gmail.com</span>
-                <span>📱 (540) 505-6404</span>
-                <a href="https://www.linkedin.com/in/rajureddym/" target="_blank">🔗 linkedin.com/in/rajureddym/</a>
-                <span>📍 Winchester, Virginia</span>
+            <div class="contact-links">
+                <a href="mailto:rajureddymyaka@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/rajureddym/" target="_blank">LinkedIn</a>
+                <a href="tel:+15405056404">+1 (540) 505-6404</a>
+                <span style="color: var(--text-secondary);">Winchester, Virginia</span>
             </div>
+            <a href="RajuMyaka_Resume.pdf" class="download-btn" download>Download Resume</a>
         </header>
         
-        <div class="content">
-            <section>
-                <h2>Professional Summary</h2>
-                <p class="summary">
-                    Senior Cloud Infrastructure Architect with 8+ years of experience delivering $20M+ enterprise cloud transformations across healthcare. Expert in AWS cloud architecture, infrastructure automation, DevSecOps, and cloud migration strategies. Proven track record of achieving 40% cost reductions and 90% efficiency improvements through innovative solutions. AWS certified professional with 7 certifications including Security Specialty and Solutions Architect Professional.
-                </p>
-            </section>
+        <section>
+            <h2>About</h2>
+            <p class="summary">
+                Senior Cloud Infrastructure Architect with 8+ years of experience delivering $20M+ enterprise cloud transformations across healthcare. Expert in AWS cloud architecture, infrastructure automation, DevSecOps, and cloud migration strategies. Proven track record of achieving 40% cost reductions and 90% efficiency improvements through innovative solutions. AWS certified professional with 7 certifications including Security Specialty and Solutions Architect Professional.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Experience</h2>
             
-            <section>
-                <h2>Work Experience</h2>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <div class="company">Amazon Web Services</div>
-                            <div class="position">Senior Cloud Infrastructure Architect</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Jun 2022 - Present</div>
-                            <div class="location">Remote</div>
-                        </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-row">
+                        <div class="company">Amazon Web Services</div>
+                        <div class="date">Jun 2022 - Present</div>
                     </div>
-                    <ul class="achievements">
-                        <li><span class="achievement-title">Cloud Solution Architecture:</span> Led technical scoping for 26+ healthcare organizations, architecting cloud solutions valued at $20M+ for FY25</li>
-                        <li><span class="achievement-title">Stakeholder Engagement:</span> Collaborated with executive stakeholders on requirements gathering and business objectives, architecting scalable, secure solutions aligned with Customer Business Outcomes (CBOs)</li>
-                        <li><span class="achievement-title">Enterprise Migrations:</span> Led technical delivery for 15+ enterprise cloud transformation and migration engagements totaling $10M+</li>
-                        <li><span class="achievement-title">AWS Landing Zone:</span> Architected and delivered AWS Landing Zones for 10+ enterprise customers using Control Tower and Organizations</li>
-                        <li><span class="achievement-title">Security Architecture:</span> Designed secure, compliant AWS environments using Service Control Policies, Security Hub, GuardDuty, and AWS Config aligned with NIST, HIPAA, and CIS benchmarks</li>
-                        <li><span class="achievement-title">Operational Compliance:</span> Established organization-wide compliance automation for backup, disaster recovery, and patch management using tagging, AWS Backup, and Systems Manager, ensuring adherence to regulatory standards</li>
-                        <li><span class="achievement-title">Identity Management:</span> Implemented Identity Access Management using AWS Identity Center (SSO) with external IdP integration (Okta, Azure Entra ID) using SAML</li>
-                        <li><span class="achievement-title">Network Architecture:</span> Architected hybrid connectivity for multi-account environments using Transit Gateway, Direct Connect, and Site-to-Site VPN</li>
-                        <li><span class="achievement-title">Zero Trust Security:</span> Designed Zero Trust network security architectures using AWS Network Firewall, implementing traffic inspection and segmentation</li>
-                        <li><span class="achievement-title">Cost Optimization:</span> Delivered $3.5M+ annual savings (40% reduction) through automated resource scheduling, rightsizing, and Reserved Instance strategies</li>
-                        <li><span class="achievement-title">Resilience Engineering:</span> Architected chaos engineering framework using AWS Resilience Hub and Fault Injection Service, improving system reliability by 80%</li>
-                        <li><span class="achievement-title">Executive Advisory:</span> Advised C-suite and engineering leaders on AWS best practices, architecture trade-offs, and risk mitigation strategies</li>
-                        <li><span class="achievement-title">Technical Enablement:</span> Delivered 20+ AWS technical enablement workshops to 1000+ attendees from customer and partner teams</li>
-                        <li><span class="achievement-title">Training & Mentorship:</span> Developed and launched internal AWSome Builder program to accelerate new hire readiness, mentoring engineers for Area of Depth and Technical Field Community programs</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <div class="company">Amazon Web Services</div>
-                            <div class="position">DevOps Consultant II</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Jan 2021 - May 2022</div>
-                            <div class="location">Remote</div>
-                        </div>
-                    </div>
-                    <ul class="achievements">
-                        <li><span class="achievement-title">Platform Engineering:</span> Built bioinformatics research platform automation reducing project setup time by 90% (from 5 hours to 30 minutes)</li>
-                        <li><span class="achievement-title">Serverless Architecture:</span> Developed serverless medical image metadata extraction for PACS/DICOM data using S3, Lambda, and DynamoDB, fully automating manual workflows and saving 3+ hours daily for IT teams</li>
-                        <li><span class="achievement-title">Document Processing:</span> Designed scalable serverless document ingestion using S3, Lambda, and Amazon Textract with Lex-based search, automating compound information extraction for research teams</li>
-                        <li><span class="achievement-title">Cost Management:</span> Implemented automated budget monitoring and alerting using AWS Budgets, preventing cost overruns and saving $100K+ annually</li>
-                        <li><span class="achievement-title">DevSecOps:</span> Implemented complex Azure DevSecOps pipelines for multi-account continuous deployments with automated security scanning</li>
-                        <li><span class="achievement-title">Infrastructure as Code:</span> Designed CI/CD pipelines using CodePipeline, CodeBuild, CodeDeploy and IaC using CloudFormation and Terraform</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <div class="company">Amazon Web Services</div>
-                            <div class="position">DevOps Cloud Support Engineer II</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Jan 2019 - Dec 2020</div>
-                            <div class="location">Remote</div>
-                        </div>
-                    </div>
-                    <ul class="achievements">
-                        <li><span class="achievement-title">Technical Support:</span> Provided Tier 3 technical support to enterprise customers across AWS Services including CodePipeline, CloudFormation, and Elastic Beanstalk</li>
-                        <li><span class="achievement-title">Container Expertise:</span> Served as Subject Matter Expert for Amazon Elastic Container Service (ECS) and Elastic Kubernetes Service (EKS)</li>
-                        <li><span class="achievement-title">Operational Excellence:</span> Reduced ECS service team escalations by 40% through advanced troubleshooting and internal tooling improvements</li>
-                        <li><span class="achievement-title">Customer Success:</span> Resolved 600+ critical production tickets performing root cause analysis for hundreds of enterprise customers</li>
-                        <li><span class="achievement-title">Knowledge Sharing:</span> Authored 8 Knowledge Center articles and delivered 15+ service enablement sessions for 100+ engineers</li>
-                        <li><span class="achievement-title">Product Influence:</span> Collaborated with AWS service teams and influenced product roadmap based on customer feedback</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <div class="company">Virginia Tech</div>
-                            <div class="position">Web Application Administrator II</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Jan 2018 - Dec 2018</div>
-                            <div class="location">Blacksburg, VA</div>
-                        </div>
-                    </div>
-                    <ul class="achievements">
-                        <li><span class="achievement-title">Container Modernization:</span> Containerized Apache web server and deployed via Docker Swarm to modernize legacy infrastructure</li>
-                        <li><span class="achievement-title">Configuration Management:</span> Automated configuration management and deployment using Jenkins pipelines and Ansible</li>
-                        <li><span class="achievement-title">Database Administration:</span> Managed Adobe Experience Manager system and MongoDB cluster administration including upgrades, backups, and recovery</li>
-                        <li><span class="achievement-title">Monitoring:</span> Implemented web services monitoring using Prometheus and Grafana with comprehensive root cause analysis</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">
-                            <div class="company">Wipro Ltd</div>
-                            <div class="position">System Engineer</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Feb 2015 - Jul 2016</div>
-                            <div class="location">Hyderabad, India</div>
-                        </div>
-                    </div>
-                    <ul class="achievements">
-                        <li><span class="achievement-title">Linux Administration:</span> Supported Linux server administration, DNS/DHCP configuration, and system automation using Chef and Jenkins</li>
-                        <li><span class="achievement-title">CI/CD Implementation:</span> Built CI/CD pipelines for Java web services using Maven and Jenkins, deployed Java applications in clustered environments</li>
-                        <li><span class="achievement-title">Storage Management:</span> Managed scalable storage solutions using Logical Volume Management (LVM) with various disk management techniques</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <section>
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-category">Cloud Platforms</div>
-                        <div class="skill-list">AWS (Expert), Azure, Multi-cloud Architecture, Hybrid Cloud Solutions</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Infrastructure as Code</div>
-                        <div class="skill-list">AWS CDK, CloudFormation, Terraform, Ansible, Packer, GitOps, Infrastructure Automation</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">DevOps & CI/CD</div>
-                        <div class="skill-list">GitHub Actions, GitLab CI, Jenkins, Azure DevOps, Argo CD, CodePipeline, CodeBuild, CodeDeploy</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Containers & Orchestration</div>
-                        <div class="skill-list">Docker, Kubernetes, Amazon ECS, Amazon EKS, Fargate, Container Security</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Programming</div>
-                        <div class="skill-list">Python, TypeScript, JavaScript, Bash, SQL, Infrastructure Automation Scripts</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Databases</div>
-                        <div class="skill-list">PostgreSQL, MySQL, MongoDB, Amazon Aurora, DynamoDB, RDS, Database Migration Service</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Monitoring & Observability</div>
-                        <div class="skill-list">CloudWatch, X-Ray, Prometheus, Grafana, ELK Stack, Splunk, APM Tools</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Security & Compliance</div>
-                        <div class="skill-list">HIPAA, IAM, KMS, Secrets Manager, Security Hub, GuardDuty, Config, CloudTrail, Zero Trust</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Networking</div>
-                        <div class="skill-list">VPC, Transit Gateway, Direct Connect, VPN, Route 53, CloudFront, ALB/NLB, Network Firewall, WAF</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Storage & Compute</div>
-                        <div class="skill-list">EC2, AWS Batch, EBS, S3, EFS, FSx, FSx for NetApp ONTAP, Storage Gateway</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Migrations</div>
-                        <div class="skill-list">Cloud Migration Factory, Application Migration Service (MGN), DataSync, Database Migration Service</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Modernization</div>
-                        <div class="skill-list">Event Driven Architecture, Serverless, Microservices, API Gateway, Lambda, Step Functions, Event Bridge</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-category">Methodologies</div>
-                        <div class="skill-list">Agile, Scrum, DevOps, Automation, Chaos Engineering, Well-Architected Framework</div>
+                    <div class="position-row">
+                        <div class="position">Senior Cloud Infrastructure Architect</div>
+                        <div class="location">Remote</div>
                     </div>
                 </div>
-            </section>
-            
-            <section>
-                <h2>Certifications</h2>
-                <ul class="cert-list">
-                    <li><strong>Security:</strong> AWS Certified Security - Specialty</li>
-                    <li><strong>Professional:</strong> AWS Certified Solutions Architect - Professional, AWS Certified DevOps Engineer - Professional</li>
-                    <li><strong>Associate:</strong> AWS Certified Solutions Architect - Associate, AWS Certified Developer - Associate, AWS Certified SysOps Administrator - Associate</li>
-                    <li><strong>Specialty:</strong> AWS Certified AI Practitioner</li>
-                    <li><strong>Endorsements:</strong> SME - Elastic Container Service (ECS), Area of Depth Expert - Network & Edge Services</li>
+                <ul class="achievements">
+                    <li><span class="achievement-title">Cloud Solution Architecture:</span> Led technical scoping for 26+ healthcare organizations, architecting cloud solutions valued at $20M+ for FY25</li>
+                    <li><span class="achievement-title">Stakeholder Engagement:</span> Collaborated with executive stakeholders on requirements gathering and business objectives, architecting scalable, secure solutions aligned with Customer Business Outcomes (CBOs)</li>
+                    <li><span class="achievement-title">Enterprise Migrations:</span> Led technical delivery for 15+ enterprise cloud transformation and migration engagements totaling $10M+</li>
+                    <li><span class="achievement-title">AWS Landing Zone:</span> Architected and delivered AWS Landing Zones for 10+ enterprise customers using Control Tower and Organizations</li>
+                    <li><span class="achievement-title">Security Architecture:</span> Designed secure, compliant AWS environments using Service Control Policies, Security Hub, GuardDuty, and AWS Config aligned with NIST, HIPAA, and CIS benchmarks</li>
+                    <li><span class="achievement-title">Operational Compliance:</span> Established organization-wide compliance automation for backup, disaster recovery, and patch management using tagging, AWS Backup, and Systems Manager</li>
+                    <li><span class="achievement-title">Identity Management:</span> Implemented Identity Access Management using AWS Identity Center (SSO) with external IdP integration (Okta, Azure Entra ID) using SAML</li>
+                    <li><span class="achievement-title">Network Architecture:</span> Architected hybrid connectivity for multi-account environments using Transit Gateway, Direct Connect, and Site-to-Site VPN</li>
+                    <li><span class="achievement-title">Zero Trust Security:</span> Designed Zero Trust network security architectures using AWS Network Firewall, implementing traffic inspection and segmentation</li>
+                    <li><span class="achievement-title">Cost Optimization:</span> Delivered $3.5M+ annual savings (40% reduction) through automated resource scheduling, rightsizing, and Reserved Instance strategies</li>
+                    <li><span class="achievement-title">Resilience Engineering:</span> Architected chaos engineering framework using AWS Resilience Hub and Fault Injection Service, improving system reliability by 80%</li>
+                    <li><span class="achievement-title">Executive Advisory:</span> Advised C-suite and engineering leaders on AWS best practices, architecture trade-offs, and risk mitigation strategies</li>
+                    <li><span class="achievement-title">Technical Enablement:</span> Delivered 20+ AWS technical enablement workshops to 1000+ attendees from customer and partner teams</li>
+                    <li><span class="achievement-title">Training & Mentorship:</span> Developed and launched internal AWSome Builder program to accelerate new hire readiness, mentoring engineers for Area of Depth and Technical Field Community programs</li>
                 </ul>
-            </section>
+            </div>
             
-            <section>
-                <h2>Education</h2>
-                
-                <div class="education-item">
-                    <div class="education-header">
-                        <div>
-                            <div class="school">University of Missouri Kansas City</div>
-                            <div class="degree">Master of Science in Software Engineering</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Aug 2016 - Dec 2017</div>
-                            <div class="location">Kansas City, MO</div>
-                        </div>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-row">
+                        <div class="company">Amazon Web Services</div>
+                        <div class="date">Jan 2021 - May 2022</div>
                     </div>
-                    <div class="education-details">
-                        <strong>Focus Areas:</strong> Cloud Computing, Software Architecture, Distributed Systems<br>
-                        <strong>GPA:</strong> 3.5/4.0
+                    <div class="position-row">
+                        <div class="position">DevOps Consultant II</div>
+                        <div class="location">Remote</div>
                     </div>
                 </div>
-                
-                <div class="education-item">
-                    <div class="education-header">
-                        <div>
-                            <div class="school">Sreenidhi Institute of Science & Technology</div>
-                            <div class="degree">Bachelor of Technology in Electronics & Communication Engineering</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="date">Aug 2011 - May 2015</div>
-                            <div class="location">Hyderabad, India</div>
-                        </div>
+                <ul class="achievements">
+                    <li><span class="achievement-title">Platform Engineering:</span> Built bioinformatics research platform automation reducing project setup time by 90% (from 5 hours to 30 minutes)</li>
+                    <li><span class="achievement-title">Serverless Architecture:</span> Developed serverless medical image metadata extraction for PACS/DICOM data using S3, Lambda, and DynamoDB, fully automating manual workflows and saving 3+ hours daily for IT teams</li>
+                    <li><span class="achievement-title">Document Processing:</span> Designed scalable serverless document ingestion using S3, Lambda, and Amazon Textract with Lex-based search, automating compound information extraction for research teams</li>
+                    <li><span class="achievement-title">Cost Management:</span> Implemented automated budget monitoring and alerting using AWS Budgets, preventing cost overruns and saving $100K+ annually</li>
+                    <li><span class="achievement-title">DevSecOps:</span> Implemented complex Azure DevSecOps pipelines for multi-account continuous deployments with automated security scanning</li>
+                    <li><span class="achievement-title">Infrastructure as Code:</span> Designed CI/CD pipelines using CodePipeline, CodeBuild, CodeDeploy and IaC using CloudFormation and Terraform</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-row">
+                        <div class="company">Amazon Web Services</div>
+                        <div class="date">Jan 2019 - Dec 2020</div>
                     </div>
-                    <div class="education-details">
-                        <strong>Focus Areas:</strong> Computer Networks, System Design, Programming<br>
-                        <strong>GPA:</strong> 3.8/4.0
+                    <div class="position-row">
+                        <div class="position">DevOps Cloud Support Engineer II</div>
+                        <div class="location">Remote</div>
                     </div>
                 </div>
-            </section>
-        </div>
+                <ul class="achievements">
+                    <li><span class="achievement-title">Technical Support:</span> Provided Tier 3 technical support to enterprise customers across AWS Services including CodePipeline, CloudFormation, and Elastic Beanstalk</li>
+                    <li><span class="achievement-title">Container Expertise:</span> Served as Subject Matter Expert for Amazon Elastic Container Service (ECS) and Elastic Kubernetes Service (EKS)</li>
+                    <li><span class="achievement-title">Operational Excellence:</span> Reduced ECS service team escalations by 40% through advanced troubleshooting and internal tooling improvements</li>
+                    <li><span class="achievement-title">Customer Success:</span> Resolved 600+ critical production tickets performing root cause analysis for hundreds of enterprise customers</li>
+                    <li><span class="achievement-title">Knowledge Sharing:</span> Authored 8 Knowledge Center articles and delivered 15+ service enablement sessions for 100+ engineers</li>
+                    <li><span class="achievement-title">Product Influence:</span> Collaborated with AWS service teams and influenced product roadmap based on customer feedback</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-row">
+                        <div class="company">Virginia Tech</div>
+                        <div class="date">Jan 2018 - Dec 2018</div>
+                    </div>
+                    <div class="position-row">
+                        <div class="position">Web Application Administrator II</div>
+                        <div class="location">Blacksburg, VA</div>
+                    </div>
+                </div>
+                <ul class="achievements">
+                    <li><span class="achievement-title">Container Modernization:</span> Containerized Apache web server and deployed via Docker Swarm to modernize legacy infrastructure</li>
+                    <li><span class="achievement-title">Configuration Management:</span> Automated configuration management and deployment using Jenkins pipelines and Ansible</li>
+                    <li><span class="achievement-title">Database Administration:</span> Managed Adobe Experience Manager system and MongoDB cluster administration including upgrades, backups, and recovery</li>
+                    <li><span class="achievement-title">Monitoring:</span> Implemented web services monitoring using Prometheus and Grafana with comprehensive root cause analysis</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-row">
+                        <div class="company">Wipro Ltd</div>
+                        <div class="date">Feb 2015 - Jul 2016</div>
+                    </div>
+                    <div class="position-row">
+                        <div class="position">System Engineer</div>
+                        <div class="location">Hyderabad, India</div>
+                    </div>
+                </div>
+                <ul class="achievements">
+                    <li><span class="achievement-title">Linux Administration:</span> Supported Linux server administration, DNS/DHCP configuration, and system automation using Chef and Jenkins</li>
+                    <li><span class="achievement-title">CI/CD Implementation:</span> Built CI/CD pipelines for Java web services using Maven and Jenkins, deployed Java applications in clustered environments</li>
+                    <li><span class="achievement-title">Storage Management:</span> Managed scalable storage solutions using Logical Volume Management (LVM) with various disk management techniques</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-category">Cloud Platforms</div>
+                    <div class="skill-list">AWS (Expert), Azure, Multi-cloud Architecture, Hybrid Cloud Solutions</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Infrastructure as Code</div>
+                    <div class="skill-list">AWS CDK, CloudFormation, Terraform, Ansible, Packer, GitOps</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">DevOps & CI/CD</div>
+                    <div class="skill-list">GitHub Actions, GitLab CI, Jenkins, Azure DevOps, Argo CD, CodePipeline</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Containers & Orchestration</div>
+                    <div class="skill-list">Docker, Kubernetes, Amazon ECS, Amazon EKS, Fargate</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Programming</div>
+                    <div class="skill-list">Python, TypeScript, JavaScript, Bash, SQL</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Databases</div>
+                    <div class="skill-list">PostgreSQL, MySQL, MongoDB, Aurora, DynamoDB, RDS</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Monitoring & Observability</div>
+                    <div class="skill-list">CloudWatch, X-Ray, Prometheus, Grafana, ELK Stack, Splunk</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Security & Compliance</div>
+                    <div class="skill-list">HIPAA, IAM, KMS, Security Hub, GuardDuty, Zero Trust</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Networking</div>
+                    <div class="skill-list">VPC, Transit Gateway, Direct Connect, Route 53, CloudFront</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Migrations</div>
+                    <div class="skill-list">Migration Factory, MGN, DataSync, Database Migration Service</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Modernization</div>
+                    <div class="skill-list">Serverless, Microservices, API Gateway, Lambda, Step Functions</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-category">Methodologies</div>
+                    <div class="skill-list">Agile, DevOps, Chaos Engineering, Well-Architected Framework</div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+                <li><strong>Security:</strong> AWS Certified Security - Specialty</li>
+                <li><strong>Professional:</strong> AWS Certified Solutions Architect - Professional, AWS Certified DevOps Engineer - Professional</li>
+                <li><strong>Associate:</strong> AWS Certified Solutions Architect - Associate, AWS Certified Developer - Associate, AWS Certified SysOps Administrator - Associate</li>
+                <li><strong>Specialty:</strong> AWS Certified AI Practitioner</li>
+                <li><strong>Endorsements:</strong> SME - Elastic Container Service (ECS), Area of Depth Expert - Network & Edge Services</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="school">University of Missouri Kansas City</div>
+                        <div class="degree">Master of Science in Software Engineering</div>
+                    </div>
+                    <div>
+                        <div class="date">Aug 2016 - Dec 2017</div>
+                        <div class="location">Kansas City, MO</div>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <strong>Focus Areas:</strong> Cloud Computing, Software Architecture, Distributed Systems<br>
+                    <strong>GPA:</strong> 3.5/4.0
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="school">Sreenidhi Institute of Science & Technology</div>
+                        <div class="degree">Bachelor of Technology in Electronics & Communication Engineering</div>
+                    </div>
+                    <div>
+                        <div class="date">Aug 2011 - May 2015</div>
+                        <div class="location">Hyderabad, India</div>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <strong>Focus Areas:</strong> Computer Networks, System Design, Programming<br>
+                    <strong>GPA:</strong> 3.8/4.0
+                </div>
+            </div>
+        </section>
         
         <footer>
-            <p>&copy; 2024 Raju Myaka. All rights reserved.</p>
+            <p>© 2024 Raju Myaka. All rights reserved.</p>
         </footer>
     </div>
 </body>
